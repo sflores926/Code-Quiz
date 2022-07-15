@@ -1,3 +1,9 @@
+    //assigned variables
+    var quizContainer = document.getElementById('quiz');
+    var resultsContainer = document.getElementById('results');
+    var submitButton = document.getElementById('submit');
+    var startButton = document.getElementById('start-buttom');
+    var scoresButton = document.getElementById('scores');
     var questions= [
       {
         title: 'Commonly used data types DO NOT include: ',
@@ -33,3 +39,6 @@
     ];
 
     console.log(questions);
+
+    //function for questions
+

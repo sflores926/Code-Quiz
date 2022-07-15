@@ -2,15 +2,12 @@ body {
     background-color: rgb(61, 84, 144);
 }
 
-header {
-    display: inline;
-}
-
 #high-score {
     color: rgb(254, 254, 254);
     text-decoration: none;
     font-size: 16px;
 }
+
 
 #time-remaining {
     color: rgb(254, 254, 254);
@@ -39,7 +36,7 @@ p {
     margin: 5%;
 }
 
-.start-quiz {
+.start-button {
     margin: auto;
     padding: 10px;
 }
