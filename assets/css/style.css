@@ -2,6 +2,10 @@ body {
     background-color: rgb(61, 84, 144);
 }
 
+header {
+    display: inline;
+}
+
 #high-score {
     color: rgb(254, 254, 254);
     text-decoration: none;
@@ -13,12 +17,11 @@ body {
     font-size: 16px;
 }
 
-.container {
+.container { 
     display: grid;
     justify-content: center;
     margin: 15%;
-}
-
+} 
 
 .text-center {
     text-align: center;
@@ -36,6 +39,7 @@ p {
     margin: 5%;
 }
 
-.start-button {
+.start-quiz {
     margin: auto;
+    padding: 10px;
 }
