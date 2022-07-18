@@ -12,6 +12,7 @@ body {
 #time-remaining {
     color: rgb(254, 254, 254);
     font-size: 16px;
+    display: inline;
 }
 
 .container { 
