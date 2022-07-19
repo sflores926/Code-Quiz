@@ -8,26 +8,50 @@
     <title>Code Quiz Challenge</title>
 </head>
 
-<header>
-    <nav class="navbar-top">
-        <a href="#" id="high-score">High Score</a>
-        <h4 id="time-remaining"></h4>
-      </nav>
-
-</header>
-
 <body>
-    <section id="quiz" class="container">
+    <section class="container">
+        <!--where you can access the high scores-->
+        <div class="scores">
+          <a href="#" id="high-scores">High Scores</a>  
+        </div>
+        <!--Timer section-->
+        <div class="timerView" id="timer">
+           <h2 id="time-remaining">Total time: <span id="timeLeft">0</span></h2> 
+        </div>
+        <!--Starter page-->
+        <main class="quizBody">
         <div id="quiz-header" class="card">
             <h1 class="text-center">Code Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-        </div> 
-        <div id="quiz-container" class="hide">
-            <div id="questions"></div>
-        </div>
-
             <button class="start-button" id="start-btn-btn">Start Quiz</button>
-            
+        </div> 
+        <!--Questions section-->
+        <div id="quizContainer" class="questionHide">
+            <h2 id="question-title" class="questionTitle"></h2>
+                <p><button class="optionsBtn" id="opt0"></button></p>
+                <p><button class="optionsBtn" id="opt1"></button></p>
+                <p><button class="optionsBtn" id="opt2"></button></p>
+                <p><button class="optionsBtn" id="opt3"></button></p>
+                <p id="checkAnswer" class="answer"></p>
+        </div>
+    <!--Section to see your score and submit your score-->
+        <div  class="scoresView" id="scoresSection">
+            <h1>Score: <span id="score"></span></h1>
+            <form>
+                <p>Your initial here: <input id="initials" type="text"><button type="submit" id="submitBtn">Submit</button> 
+                </p>
+            </form>
+        </div>
+<!--highscores page-->
+        <div class="highScoresView" id="highScoresSection">
+            <h1>High Scores</h1>
+            <div id="othersHighScores"></div>
+        
+        <p>
+            <button id="backBtn" type="submit">Go Back</button>
+        </p>
+       </div>    
+       </main> 
     </section>
 
     <script src="./assets/js/script.js"></script>
