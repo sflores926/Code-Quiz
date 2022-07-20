@@ -218,6 +218,8 @@ var user = {
     score: score.textContent
 };
 
+scoresArr.push(user);
+
 var scoresArray = JSON.stringify(scoresArr);
 window.localStorage.setItem("high scores", scoresArray);
 
@@ -249,7 +251,7 @@ function seeScores() {
 
     for (;i < savedScores.length; i++) {
         var newScore = document.createElement("p");
-        newScore.innerHTML = storeScore[i].initials + storeScore[i].score;
+        newScore.innerHTML = storeScore[i].initials + ": " + storeScore[i].score;
         othersHighScores.appendChild(newScore);
 
     }
