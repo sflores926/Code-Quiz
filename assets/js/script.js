@@ -59,7 +59,7 @@ var questions = [
         options: ["JavaScript", "terminal/bash", "for loops", "console.log"],
         correctAnswer: 3
     }
- 
+
 ];
 
 console.log(questions);
@@ -95,13 +95,13 @@ function checkAnswer(correctAnswer) {
 
 
 //function when times is up it give you your score
-function timesUp(){
+function timesUp() {
     questionsCont.style.display = "none";
     start.style.display = "none";
     timer.style.display = "none";
     highScoresSection.style.display = "block";
     scoreSection.style.display = "block";
-    
+
 
     score.textContent = correctAns;
 
@@ -147,7 +147,7 @@ function setTime() {
 
 //function for questions
 function makeQuiz() {
-       nextQuestion();
+    nextQuestion();
     // questionTitle.textContent = questions[questionIndex].question[0];
     // option1.textContent = questions[questionIndex].options[0];
     // option2.textContent = questions[questionIndex].options[1];
@@ -156,12 +156,12 @@ function makeQuiz() {
 }
 
 function nextQuestion() {
-            questionTitle.textContent = questions[questionIndex].question;
-            option1.textContent = questions[questionIndex].options[0];
-            option2.textContent = questions[questionIndex].options[1];
-            option3.textContent = questions[questionIndex].options[2];
-            option4.textContent = questions[questionIndex].options[3];
-    }
+    questionTitle.textContent = questions[questionIndex].question;
+    option1.textContent = questions[questionIndex].options[0];
+    option2.textContent = questions[questionIndex].options[1];
+    option3.textContent = questions[questionIndex].options[2];
+    option4.textContent = questions[questionIndex].options[3];
+}
 console.log(questions[questionIndex].question);
 console.log(questions[questionIndex].options);
 
@@ -192,38 +192,38 @@ console.log(questions[questionIndex].options);
 
 
 
-//to enter initials 
+//to enter initials and get scores to send high scores to high scores page
 function storeScore(event) {
     event.preventDefault();
-     if(initials.value === "") {
+    if (initials.value === "") {
         alert("Enter initials");
         return;
-     }
-scoreSection.style.display = "none";
-timer.style.display = "none";
-highScoresSection.style.display = "block";
-start.style.display = "none";
+    }
+    scoreSection.style.display = "none";
+    timer.style.display = "none";
+    highScoresSection.style.display = "block";
+     start.style.display = "none";
 
-var savedScores = localStorage.getItem("high scores")
-var scoresArr;
+    var savedScores = localStorage.getItem("high scores")
+    var scoresArr;
 
-//to store high scores
-if(savedScores === null) {
-    scoresArr = [];
-} else {
-    scoresArr = JSON.parse(savedScores)
-} 
-var user = {
-    initials: initials.value,
-    score: score.textContent
-};
+    //to store high scores
+    if (savedScores === null) {
+        scoresArr = [];
+    } else {
+        scoresArr = JSON.parse(savedScores)
+    }
+    var user = {
+        initials: initials.value,
+        score: score.textContent
+    };
 
-scoresArr.push(user);
+    scoresArr.push(user);
 
-var scoresArray = JSON.stringify(scoresArr);
-window.localStorage.setItem("high scores", scoresArray);
+    var scoresArray = JSON.stringify(scoresArr);
+    window.localStorage.setItem("high scores", scoresArray);
 
-seeScores();
+    seeScores();
 
 }
 
@@ -241,7 +241,7 @@ function seeScores() {
 
     var savedScores = localStorage.getItem("high scores");
 
-    if(savedScores === null) {
+    if (savedScores === null) {
         return;
     }
 
@@ -249,7 +249,7 @@ function seeScores() {
 
     var storeScore = JSON.parse(savedScores);
 
-    for (;i < savedScores.length; i++) {
+    for (; i < savedScores.length; i++) {
         var newScore = document.createElement("p");
         newScore.innerHTML = storeScore[i].initials + ": " + storeScore[i].score;
         othersHighScores.appendChild(newScore);
@@ -266,11 +266,11 @@ option1.addEventListener("click", optionA);
 option2.addEventListener("click", optionB);
 option3.addEventListener("click", optionC);
 option4.addEventListener("click", optionD);
-submitBtn.addEventListener("click", function(event){storeScore(event);});
-highScores.addEventListener("click", function(event) {
+submitBtn.addEventListener("click", function (event) { storeScore(event); });
+highScores.addEventListener("click", function (event) {
     seeScores(event);
 });
-backBtn.addEventListener("click", function() {
-    start.style.display = "block";
+backBtn.addEventListener("click", function () {
+     start.style.display = "block";
     highScoresSection.style.display = "none";
 });

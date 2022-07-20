@@ -19,9 +19,11 @@ a {
 
 
 main { 
-    display: grid;
-    justify-content: center;
-    margin: 15%;
+    /* display: grid; */
+    /* justify-content: center; */
+    margin-top: 10%;
+    padding-right: 15%;
+    padding-left: 15%;
 } 
 
 .text-center {
@@ -37,7 +39,7 @@ p {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* font-size: 16px; */
-    padding-top: 3%;
+    /* padding-top: 3%; */
     margin: 5%;
 }
 
