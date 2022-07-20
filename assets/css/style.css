@@ -32,6 +32,7 @@ main {
     color: rgb(254, 254, 254)
 }
 
+
 p {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,7 +47,9 @@ p {
 
 .questionTitle {
     justify-content: center;
-    font-size: 15px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
 }
 
 .answer {
