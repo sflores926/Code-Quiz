@@ -18,3 +18,9 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
+* Deployed URL: https://sflores926.github.io/Code-Quiz/
+* Repo Link: https://github.com/sflores926/Code-Quiz
+
+The following animation demonstrates the application functionality:
+
+![Interactive coding quiz that weill ask you to enter your initials to save the high score before starting over quiz.](Code-Quiz-Challenge.gif)
